@@ -1,4 +1,4 @@
-#I decided to use pie chart to display male / female survival count. Gender submissions file.
+#Pie chart to display male / female survival count. Gender submissions file.
 
 import pandas as pd
 import matplotlib.pyplot as plt
