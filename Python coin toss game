@@ -1,0 +1,29 @@
+import random
+
+print("Welcome to the coin toss game!")
+
+correct_guesses = [ ]
+total_guesses = [ ]
+
+while True:
+    guess = input("Make your guess (heads or tails), or type 'quit' to exit: ")
+    
+    if guess == 'quit':
+        print("Thanks for playing!")
+        break
+    
+    coin_toss = random.randint(0, 1)
+    
+    if (guess == 'heads' and coin_toss == 0) or (guess == 'tails' and coin_toss == 1):
+        correct_guesses.append(guess)
+        total_guesses.append(guess)
+        print("Congratulations! Your guess is correct!")
+        break
+
+    else:
+        total_guesses.append(guess)
+        print("Sorry, your guess is incorrect.")
+        continue
+    
+print(f"Total guesses: {len(total_guesses)}")
+print(f"Correct guesses: {len(correct_guesses)}")
