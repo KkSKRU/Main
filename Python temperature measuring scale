@@ -1,0 +1,15 @@
+# Create a Python program for temperature conversion between Celsius and Fahrenheit scales.
+# The program should prompt users to select the direction of conversion, accept input for the temperature value,
+# and accurately perform the conversion (use IF and/or ELSE).
+# Output should be displayed with formatted strings showing both the original and converted temperatures.
+
+temperature = input('Enter temperature measuring scale (Celsius or Fahrenheit): ')
+
+if temperature == 'Celsius':
+    value = input('Enter value in Celsius: ')
+    print('Value is: ' + str(value) + ' C')
+elif temperature == 'Fahrenheit':
+    value = input('Enter value in Fahrenheit: ')
+    print('Value is: ' + str(value) + ' F')
+else:
+    print('Invalid temperature scale entered.')
