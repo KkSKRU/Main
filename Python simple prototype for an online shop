@@ -1,0 +1,81 @@
+import datetime
+
+class Client:
+    number_of_clients = 0
+
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+        self.accounts = []
+        Client.number_of_clients += 1
+
+    def add_account(self, account):
+        self.accounts.append(account)
+
+    def print_transactions(self):
+        print(f"Client {self.name} ({self.id}):")
+        for account in self.accounts:
+            account.print_transactions()
+
+class Account:
+    def __init__(self, number, currency, balance):
+        self.number = number
+        self.currency = currency
+        self.balance = balance
+        self.transactions = []
+
+    def make_withdrawal(self, amount, note):
+        if amount <= self.balance:
+            self.transactions.append(Transaction(self.currency, -amount, note))
+            self.balance -= amount
+        else:
+            print(f"Not enough balance to withdraw {amount} {self.currency} for {note}")
+
+    def print_transactions(self):
+        print(f"  Account {self.number}:")
+        for transaction in self.transactions:
+            print(f"    {transaction}")
+
+class Transaction:
+    def __init__(self, currency, amount, note):
+        self.date = datetime.datetime.now()
+        self.currency = currency
+        self.amount = amount
+        self.note = note
+
+    def __str__(self):
+        return f"{self.date} - {self.amount} {self.currency} for {self.note}"
+
+class Items:
+    inventory = ['bike', 'skates', 'tent', 'barbecue', 'skateboard']
+    price_in_eur = [500, 200, 140, 130, 150]
+
+    @classmethod
+    def get_item_price(cls, item_name):
+        for item, price in zip(cls.inventory, cls.price_in_eur):
+            if item == item_name:
+                return price
+        return None
+
+# Add clients to a list
+clients = [
+    Client('485690', 'Hannah'),
+    Client('590326', 'Sven'),
+    Client('709247', 'Liam')
+]
+
+# Adding accounts to clients
+clients[0].add_account(Account('EE3949737790102', 'EUR', 4000.00))
+clients[1].add_account(Account('EE4777589988809', 'EUR', 700.50))
+clients[2].add_account(Account('EE5748483993921', 'EUR', 1100.80))
+
+# Making some transactions
+clients[0].accounts[0].make_withdrawal(Items.get_item_price('bike'), 'bike')
+clients[0].accounts[0].make_withdrawal(Items.get_item_price('tent'), 'tent')
+clients[1].accounts[0].make_withdrawal(Items.get_item_price('skates'), 'skates')
+clients[2].accounts[0].make_withdrawal(Items.get_item_price('skateboard'), 'skateboard')
+clients[2].accounts[0].make_withdrawal(Items.get_item_price('skateboard'), 'skateboard')
+
+# Print out data with nested loops
+for client in clients:
+    client.print_transactions()
