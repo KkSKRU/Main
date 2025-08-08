@@ -1,0 +1,54 @@
+/*
+Develop a simple book management application with ArrayList.
+User should be able to add a book to ArrayList.
+User should be able to remove a book from ArrayList.
+
+Easy: Work with String in ArrayList. All the actions should be available for user.
+
+Medium: Work with String User should be able to repeat all the actions infinitely.
+
+Hard: Create a Book class and work with Book object to the ArrayList.
+*/
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> bookManagement = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Enter a book title to add to the list, enter 'remove' to remove a title, or enter 'exit' to quit: ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            } else if (input.equalsIgnoreCase("remove")) {
+                System.out.println("Enter the book title you would like to remove from the list: ");
+                String bookToRemove = scanner.nextLine();
+                if (bookManagement.remove(bookToRemove)) {
+                    System.out.println(bookToRemove + " has been removed from the book management system.");
+                } else {
+                    System.out.println(bookToRemove + " was not found in the book management system.");
+                }
+            } else {
+                addBook(bookManagement, input);
+            }
+        }
+
+        printArrayList(bookManagement);
+        scanner.close();
+    }
+
+    public static void printArrayList(ArrayList<String> books) {
+        System.out.println("Current Book List: ");
+        for (String book : books) {
+            System.out.println(book);
+        }
+    }
+
+    public static void addBook(ArrayList<String> bookManagement, String book) {
+        bookManagement.add(book);
+        System.out.println(book + " has been added to the book management system.");
+    }
+}
