@@ -1,6 +1,6 @@
 # Welcome to my repository 👩🏼‍💻⌨️🖥️
 Hello, my name is Ketlina and I am a junior programmer. This page is dedicated to showcasing my skills and work history. Let's connect!
-## Programs I have been a part of 🎓📖
+## Programs I've been a part of:🎓📖
 - Riga Tech Girls and Interreg Central Baltic Women Go Tech Program 327 Hours (12 ECTS) in Java, Python and DevOps (2025)
 - HarvardX CS50's Introduction to Computer Science (2025-)
 - HarvardX CS50's Web Programming with Python and JavaScript (2025-)
@@ -9,7 +9,7 @@ Hello, my name is Ketlina and I am a junior programmer. This page is dedicated t
 - Coursera Google Ads for Beginners (2021)
 - Coursera Google Data Analytics Professional Certificate: Data, Data, Everywhere (2021)
 
-## My skills 🐍🍵
+## My skills: 🐍🍵
 - JavaScript
 
 - HTML
@@ -23,9 +23,11 @@ Hello, my name is Ketlina and I am a junior programmer. This page is dedicated t
 - DevOps
   
 - Github
+
+- Intellij, Replit, Google Colab, Postman
   
 - Figma, Miro, Canva, Menti, Adobe
 
-## Current Projects
--Conversion Tool Website @SIA Dev101
+## Current Projects: :chart_with_upwards_trend: 
+- Conversion Tool Website @SIA Dev101
 
