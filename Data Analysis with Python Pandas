@@ -1,0 +1,62 @@
+#I decided to use pie chart to display male / female survival count. Gender submissions file.
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dataset = pd.read_csv('/content/gender_submission.csv')
+
+value_counts = dataset['Survived'].value_counts()
+
+print("Value counts of male and female passengers that survived:")
+print(value_counts)
+
+survived_counts = dataset['Survived'].value_counts(dropna=False).reset_index()
+survived_counts.columns = ['Survived', 'Count']
+
+plt.figure(figsize=(4, 4))
+plt.pie(survived_counts['Count'], labels=['Female', 'Male'], autopct='%1.1f%%', colors=['hotpink', 'royalblue'], startangle=80)
+plt.title('Titanic Surviving Passenger Distribution by Gender')
+plt.axis('equal')
+plt.show()
+
+#I decided to use scatter plot to show correlation between ticket prices and age of Titanic passengers. Test file.
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dataset = pd.read_csv('/content/test.csv')
+
+plt.scatter(x=dataset['Age'], y=dataset['Fare'])
+plt.title('Scatter Plot of Titanic Fare Price and Age Correlation')
+plt.xlabel('Age')
+plt.ylabel('Fare')
+plt.grid(True)
+plt.show()
+
+#Initial Experimentation with Train file, checking dimensions of a dataset, analysing value counts, computing basic statistics
+
+dataset = pd.read_csv('/content/train.csv')
+dataset.head()
+dataset.info() 
+dataset['Embarked'].value_counts(dropna=False).reset_index()
+
+age_column = dataset['Age']
+
+mean_value = age_column.mean()
+
+median_value = age_column.median()
+
+min_value = age_column.min()
+
+max_value = age_column.max()
+
+print(f"Mean Age: {mean_value}")
+print(f"Median Age: {median_value}")
+print(f"Minimum Age: {min_value}")
+print(f"Maximum Age: {max_value}")
+
+
+value_counts = dataset['Survived'].value_counts()
+
+print("Value counts of male and female passengers that survived:")
+print(value_counts)
