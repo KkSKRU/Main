@@ -4,3 +4,19 @@ Hello, my name is Ketlina and I am a junior programmer. This page is dedicated t
 
 
 ## My skills 🐍🍵
+- JavaScript ☕🖋️
+
+- HTML 🌐
+
+- CSS 🎨
+
+- Java ☕
+
+- Python 🐍
+  
+- DevOps :gear:
+
+- Github :octocat:
+  
+- Figma, Miro, Canva, Menti, Adobe 🖌️
+
