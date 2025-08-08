@@ -1,0 +1,19 @@
+#person
+name = input("Enter full name: ")
+age = 57
+height = 1.74
+has_children = True
+occupation = "Teacher"
+medical_history_provided = True
+first_time_vaccination = False
+
+print(f"Age: {age}")
+print(f"Height: {height}")
+print(f"Has Children: {has_children}")
+print(f"Occupation: {occupation}")
+print(f"Medical history provided: {medical_history_provided}")
+print(f"First time vaccination: {first_time_vaccination}")
+print(f"{name} will need to receive the next dose of vaccination age {age + 10}")
+
+known_allergies = input("Provide any known allergies: ")
+daytime_telephone = input("Enter daytime phone number: ")
