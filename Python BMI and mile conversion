@@ -1,0 +1,23 @@
+#BMI
+weight_str = input("Enter your weight in kilograms: ")
+height_str = input("Enter your height in meters: ")
+
+weight = float(weight_str)
+height = float(height_str)
+
+BMI = round(weight / (height ** 2),1)
+
+print (f"Your BMI is: {BMI}")
+
+
+
+#Miles to Kilometers
+miles = input("Distance in miles: ")
+
+#converting miles to kilometers (1 mile = 1.60934 kilometers)
+CONVERSION_FACTOR = 1.60934
+miles_float = float(miles)
+kilometers =round(miles_float * CONVERSION_FACTOR, 2)
+
+#displaying the result
+print(f"Distance in kilometers: {kilometers} ")
